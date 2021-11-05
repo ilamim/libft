@@ -1,10 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ilamim <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/05 14:07:27 by ilamim            #+#    #+#             */
+/*   Updated: 2021/11/05 14:13:51 by ilamim           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_strncpy(char *dest, char *src, unsigned int n)
+#include "libft.h"
+
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int stop;
+	unsigned int	stop;
 
 	stop = 0;
-	while(*src != '\0' && stop < n)
+	while (*src != '\0' && stop < n)
 	{
 		*dest = *src;
 		dest++;
@@ -14,26 +27,3 @@ char *ft_strncpy(char *dest, char *src, unsigned int n)
 	*dest = '\0';
 	return (dest);
 }
-
-void ft_putstr(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i] != 0)
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
-}
-
-int main()
-{
-	unsigned int n;
-	char a[] = "wtvr frvr";
-	char b[] = "lalala lola";
-
-	n = 3;
-	ft_strncpy(a, b, n);
-	ft_putstr(a);
-}       
