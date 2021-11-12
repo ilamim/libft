@@ -23,6 +23,7 @@ all:	${NAME}
 
 ${NAME}:	${OBJS}
 		ar rc ${NAME} ${OBJS}
+		ranlib ${NAME}
 
 clean:
 	${RM} ${OBJS}

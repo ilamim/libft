@@ -7,7 +7,9 @@ void *ft_memcpy(void *dest, void *src, size_t n)
 
 	cdest = (unsigned char *)dest;
 	csrc = (unsigned char *)src;
-	while (n > 0)
+	if (n == 0 || dst == src)
+		return (dest);
+	while (n != 0)
 	{
 		*(cdest++) = *(csrc++);
 		n--;

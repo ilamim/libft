@@ -19,7 +19,7 @@ int	ft_isspace(int c)
 
 int	ft_atoi(const char *str)
 {
-	int	num;
+	long int	num;
 	int	sign;
 
 	num = 0;
@@ -34,7 +34,7 @@ int	ft_atoi(const char *str)
 	}
 	while (ft_isdigit((int)*str))
 	{
-		num = num * 10 + *str - '0';
+		num = (num * 10) + (*str - '0');
 		str++;
 	}
 	return (sign * num);
