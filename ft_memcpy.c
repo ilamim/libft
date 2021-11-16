@@ -1,4 +1,5 @@
 #include <stddef.h>
+#include <stdio.h>
 
 void *ft_memcpy(void *dest, void *src, size_t n)
 {
@@ -7,7 +8,7 @@ void *ft_memcpy(void *dest, void *src, size_t n)
 
 	cdest = (unsigned char *)dest;
 	csrc = (unsigned char *)src;
-	if (n == 0 || dst == src)
+	if (n == 0 || dest == src)
 		return (dest);
 	while (n != 0)
 	{
@@ -15,13 +16,4 @@ void *ft_memcpy(void *dest, void *src, size_t n)
 		n--;
 	}
 	return (dest);
-}
-
-int main()
-{
-	char dest[30];
-	
-	ft_memcpy(dest, "totototototo", 12);
-	printf("%s", dest);
-	return 0;
 }	
